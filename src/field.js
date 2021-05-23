@@ -88,11 +88,16 @@ class Board extends React.Component {
 
     render() {
         const winner = calculateWinner(this.state.squares);
+        const ispatt = CheckIfPatt(this.state.squares);
         let status;
         if (winner) {
-            status = (<div>{'Winner: ' + winner}<br />{'Returning to lobby in 10 seconds'}</div>);
+            status = (<div>{'Winner: ' + winner}<br />{'Returning to lobby in 5 seconds'}</div>);
         } else {
-            status = this.renderInfo()
+            if (ispatt) {
+                status = (<div>{'Nobody won!'}<br />{'Returning to lobby in 5 seconds'}</div>);
+            } else {
+                status = this.renderInfo()
+            }
         }
 
         return (
@@ -140,6 +145,15 @@ function calculateWinner(squares) {
         }
     }
     return null;
+}
+
+function CheckIfPatt(squares) {
+    for (let i = 0; i < squares.length; i++) {
+        if (!squares[i]) {
+            return false;
+        }
+    }
+    return true;
 }
 
 export { Board };

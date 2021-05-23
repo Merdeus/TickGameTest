@@ -67,7 +67,8 @@ class OnlineTetris extends React.Component {
   }
 
   handleStartGame() {
-    console.log("Starting game!");
+    console.log("Trying to start game!");
+    if (this.state.users.length != 2) { return; }
     this.gb.sendStart();
     this.setState({
       state: this.StateStartingGame
@@ -122,7 +123,6 @@ class OnlineTetris extends React.Component {
     this.gb.oninfoupdate = this.gbInfoUpdate.bind(this);
     this.gb.ongamestart = this.gbGameStart.bind(this);
     /*this.gb.ongameupdate = this.gbGameUpdate.bind(this);
-    this.gb.ongameend = this.gbGameEnd.bind(this);
     this.gb.onuserinfo = this.gbUserInfo.bind(this);
     this.gb.onlines = this.gbLines.bind(this);
     this.gb.onwin = this.gbWin.bind(this);*/
