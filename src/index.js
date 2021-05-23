@@ -68,7 +68,7 @@ class OnlineTetris extends React.Component {
 
   handleStartGame() {
     console.log("Trying to start game!");
-    if (this.state.users.length != 2) { return; }
+    if (this.state.users.length !== 2) { return; }
     this.gb.sendStart();
     this.setState({
       state: this.StateStartingGame
