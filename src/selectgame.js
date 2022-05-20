@@ -4,24 +4,21 @@ class SelectGame extends React.Component {
     generateName() {
         var prefixes = [
             "Großer",
-            "Schwarzer",
-            "Lila",
-            "Hacker",
+            "Kleiner",
+            "Heiliger",
             "Lustiger",
-            "Aufgeblasener",
-            "Twitch-Streamer",
-            "Korpulenter",
-            "Global Admin"
+            ""
         ]
         var suffixes = [
-            "Lian",
-            "Akin",
-            "Doggo",
-            "Dirk",
-            "Arabar",
-            "Merdeus",
-            "Typ",
+            "Fred",
             "Sven",
+            "Fabi",
+            "Felix",
+            "Gustav",
+            "Patrick",
+            "Valentin",
+            "Hugo",
+            "Louis",
             "Johannes"
         ]
 

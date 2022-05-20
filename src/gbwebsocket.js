@@ -91,13 +91,13 @@ class GBWebsocket {
     }
 
     static initiateGame(name) {
-        var gb = new GBWebsocket("wss://serhat.rip:5678/create", name);
+        var gb = new GBWebsocket("wss://example.com:5678/create/", name);
         gb.admin = true;
         return gb;
     }
 
     static joinGame(name, code) {
-        return new GBWebsocket("wss://serhat.rip:5678/join/" + code, name)
+        return new GBWebsocket("wss://example.com:5678/join/" + code, name)
     }
 
     onMessage(event) {
