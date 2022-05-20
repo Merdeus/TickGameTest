@@ -8,17 +8,10 @@ import { SelectGame } from './selectgame.js';
 import { Lobby } from './lobby.js';
 import { Board } from './field.js';
 
-class OnlineTetris extends React.Component {
-  SONG_A = "1C"
-  SONG_B = "1D"
-  SONG_C = "1E"
-  SONG_OFF = "1F"
+class OnlineTick extends React.Component {
 
-  StateConnect = "Connect"; // Select USB device
-  StateConnecting = "Connecting"; // Connect to USB device
-  StateConnectingTetris = "ConnectingTetris"; // Attempt to connect to tetris
-  StateSelectMusic = "SelectMusic";
-  StateSelectHandicap = "SelectHandicap";
+  StateConnect = "Connect";
+  StateConnecting = "Connecting";
   StateJoiningGame = "JoiningGame";
   StateLobby = "Lobby";
   StateStartingGame = "StartingGame";
@@ -181,6 +174,6 @@ class OnlineTetris extends React.Component {
 // ========================================
 
 ReactDOM.render(
-  <OnlineTetris />,
+  <OnlineTick />,
   document.getElementById('root')
 );
